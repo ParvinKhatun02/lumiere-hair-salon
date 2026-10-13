@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const Header = () => {
   return (
-    <nav className="h-14 w-[100vw] flex justify-between items-center">
+    <nav className="sticky top-0 z-50 h-14 w-[100vw] flex justify-between items-center">
       <div className="ml-15 flex items-center gap-1">
         <LeafLogo />
 
@@ -29,15 +29,13 @@ const Header = () => {
           <li className="border-b-2 border-transparent hover:border-[#7F2D1D] transition-all duration-300">Services</li>
           <li className="border-b-2 border-transparent hover:border-[#7F2D1D] transition-all duration-300">About</li>
           <li className="border-b-2 border-transparent hover:border-[#7F2D1D] transition-all duration-300">Gallery</li>
-          <li className="border-b-2 border-transparent hover:border-[#7F2D1D] transition-all duration-300">Contact</li>
+          <li className="border-b-2 border-transparent hover:border-[#7F2D1D] transition-all duration-300">Our Team</li>
         </ul>
       </div>
       <div className=" flex flex-wrap items-center mr-18 gap-4">
         <button className="bg-[#A63D24] flex gap-2 px-4 py-2 text-xs rounded-3xl font-medium text-white transition duration-300 hover:bg-[#7F2D1D]">
-          Book Appointment
-          <span>
-            <ArrowRight size={18} strokeWidth={1.3} />
-          </span>
+          Contact Us
+          
         </button>
       </div>
     </nav>

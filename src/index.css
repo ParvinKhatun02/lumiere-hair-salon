@@ -1,10 +1,50 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
+.rdp-root {
+  --rdp-accent-color: #7F2D1D;
+  --rdp-accent-background-color: #f3e2d9;
+  --rdp-chevron-disabled-opacity: 0.3;
+}
+
+/* Change the month navigation arrows to maroon */
+.rdp-chevron {
+  fill: none;
+  stroke: #7F2D1D;
+}
+
+/* Page layout */
 html,
 body,
 #root {
   margin: 0;
   width: 100%;
   min-height: 100%;
-};
+}
+
+
+.rdp-root {
+  --rdp-accent-color: #7F2D1D;
+  --rdp-accent-background-color: #f3e2d9;
+}
+
+/* Month navigation arrow color */
+.rdp-root .rdp-chevron {
+  color: #7F2D1D;
+  fill: #7F2D1D;
+  stroke: #7F2D1D;
+}
+
+/* Previous and next month buttons */
+.rdp-root .rdp-button_previous,
+.rdp-root .rdp-button_next {
+  color: #7F2D1D;
+}
+
+/* Hover effect */
+.rdp-root .rdp-button_previous:hover,
+.rdp-root .rdp-button_next:hover {
+  background-color: #f3e2d9;
+}
+

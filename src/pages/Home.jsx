@@ -4,7 +4,7 @@ import { Scissors, Sparkles, Heart, ArrowRight } from "lucide-react";
 
 const Home = () => {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#f8f3ef]">
+    <main className="relative min-h-screen w-full overflow-hidden bg-[#f8f3ef]">
       {/* Large model image — no cropping, no gradient */}
       <div className="absolute inset-0 z-0 -translate-y-8 hidden lg:block pointer-events-none">
         <img
@@ -92,7 +92,7 @@ const Home = () => {
           className="h-full w-full object-contain object-bottom"
         />
       </div>
-    </section>
+    </main>
   );
 };
 
