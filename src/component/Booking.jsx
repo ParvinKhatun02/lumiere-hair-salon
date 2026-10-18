@@ -5,7 +5,7 @@ import Calendar from "./Calendar";
 const Booking = () => {
   const [appointmentDate, setAppointmentDate] = useState(null);
   return (
-    <section className="w-full flex items-center gap-10 bg-[#FFF4E8] py-20 px-6 md:px-10">
+    <section className="w-full flex items-center gap-15 bg-[#FFF4E8] py-20 px-6 md:px-10">
       <div className="w-1/3 px-10 flex flex-col gap-3">
         <h2 className='text-5xl text-[#35251f] font-bold font-["Cormorant_Garamond"]'>
           Booking

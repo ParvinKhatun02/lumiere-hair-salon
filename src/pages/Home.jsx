@@ -1,10 +1,11 @@
 import React from "react";
 import hero_image from "../assets/hero_image.png";
 import { Scissors, Sparkles, Heart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-[#f8f3ef]">
+    <main className="relative min-h-screen w-full bg-[#f8f3ef] overflow-x-clip">
       {/* Large model image — no cropping, no gradient */}
       <div className="absolute inset-0 z-0 -translate-y-8 hidden lg:block pointer-events-none">
         <img
@@ -15,26 +16,26 @@ const Home = () => {
       </div>
 
       {/* Left content — same background as the page */}
-      <div className="relative z-10 flex min-h-screen w-full flex-col justify-center -translate-y-6 px-1 py-16 sm:px-10 lg:w-[60%] lg:pl-16 xl:pl-24">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#A63D24] sm:text-sm">
+      <div className="relative z-10 flex min-h-screen w-full flex-col justify-center px-1 py-16 sm:px-10 lg:w-[60%] lg:pl-16 xl:pl-24">
+        <p className="home-animate home-delay-1 mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#A63D24] sm:text-sm">
           BEAUTY . CARE . CONFIDENCE
         </p>
 
-        <h1 className="flex flex-col max-w-xl font-serif text-5xl leading-[1.1] text-[#2A211E] sm:text-6xl lg:text-7xl xl:text-8xl">
+        <h1 className="home-animate home-delay-2 flex flex-col max-w-xl font-serif text-5xl leading-[1.1] text-[#2A211E] sm:text-6xl lg:text-7xl xl:text-8xl">
           Your Hair,
-          <span className="italic text-[#A63D24]">Our Passion</span>
+          <span className=" home-animate home-delay-3 italic text-[#A63D24]">Our Passion</span>
         </h1>
 
-        <p className="mt-2 max-w-sm text-base leading-7 text-[#75645c] sm:text-lg">
+        <p className="home-animate home-delay-4 mt-2 max-w-sm text-base leading-7 text-[#75645c] sm:text-lg">
           Experience premium hair care, expert styling and personalized
           treatments designed to bring out the best in you.
         </p>
 
-        <div className="mt-5 flex flex-wrap items-center gap-4">
-          <button className="bg-[#A63D24] flex gap-2 px-4 py-3 text-sm rounded-3xl font-medium text-white transition duration-300 hover:bg-[#7F2D1D]">
+        <div className="home-animate home-delay-5 mt-5 flex flex-wrap items-center gap-4">
+         <Link to='/booking'> <button className="bg-[#A63D24] flex gap-2 px-4 py-3 text-sm rounded-3xl font-medium text-white transition duration-300 hover:bg-[#7F2D1D]">
             Book Your Appointment 
             <span><ArrowRight size={18} strokeWidth={1.3}/></span>
-             </button>
+             </button></Link>
 
           <button className="border border-[#35251f]/30 px-4 py-3 text-sm font-medium rounded-3xl text-[#35251f] transition duration-300 hover:border-[#a66a57] hover:text-[#a66a57]">
             Explore services
@@ -42,7 +43,7 @@ const Home = () => {
         </div>
 
         {/* Salon features */}
-        <div className="mt-14 flex flex-wrap items-center gap-x-5 gap-y-5">
+        <div className="home-animate home-delay-6 mt-14 flex flex-wrap items-center gap-x-5 gap-y-5">
           {/* Expert Stylists */}
           <div className="flex items-center gap-1">
             <div className="flex h-11 w-8 items-center justify-center  text-[#A63D24]">

@@ -4,6 +4,9 @@ import Header from './component/Header';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Booking from './component/Booking';
+import About from './pages/About';
+import Gallery from './pages/Gallery';
+import OurTeam from './pages/OurTeam';
 
 const App = () => {
   return (
@@ -14,6 +17,9 @@ const App = () => {
         <Route path='/' element= {<Home/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/booking' element={<Booking/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/gallery' element={<Gallery/>}/>
+        <Route path='/our-team' element={<OurTeam/>}/>
       </Routes>
       </div>
     </BrowserRouter>

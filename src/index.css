@@ -23,10 +23,19 @@ body,
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
 
-.rdp-root {
-  --rdp-accent-color: #7F2D1D;
-  --rdp-accent-background-color: #f3e2d9;
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 /* Month navigation arrow color */
@@ -48,3 +57,76 @@ body,
   background-color: #f3e2d9;
 }
 
+
+/* Home page text animation */
+.home-animate {
+  opacity: 0;
+  animation: homeTextReveal 0.8s ease-out forwards;
+}
+
+@keyframes homeTextReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.home-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.home-delay-2 {
+  animation-delay: 0.5s;
+}
+
+.home-delay-3 {
+  animation-delay: 0.8s;
+}
+
+.home-delay-4 {
+  animation-delay: 1.1s;
+}
+
+.home-delay-5 {
+  animation-delay: 1.4s;
+}
+
+.home-delay-6 {
+  animation-delay: 1.7s;
+}
+
+.home-delay-7 {
+  animation-delay: 1.9s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-animate {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
+
+
+.gallery-reveal {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.gallery-reveal.from-left {
+  transform: translateX(-40px);
+}
+
+.gallery-reveal.from-right {
+  transform: translateX(40px);
+}
+
+.gallery-reveal.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
