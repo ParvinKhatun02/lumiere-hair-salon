@@ -25,31 +25,32 @@ const Services = () => {
         </div>
 
         {/* Service Cards */}
-        <div className="grid w-full min-w-0 grid-cols-1 gap-5 sm:grid-cols-2 lg:flex-1 lg:grid-cols-2 xl:grid-cols-3">
+        {/* Service Cards */}
+<div className="grid w-full min-w-0 grid-cols-1 gap-5 sm:grid-cols-1 lg:flex-1 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-4 xl:gap-y-3">
 
-          {ServiceData.map((service) => (
-            <article
-              key={service.id}
-              className="min-w-0 overflow-hidden rounded-xl bg-[#FFF9F3]"
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  loading="lazy"
-                  className="h-48 w-full rounded-lg object-cover transition-transform duration-500 hover:scale-105 sm:h-52 lg:h-44 xl:h-48"
-                />
-              </div>
+ {ServiceData.map((service) => (
+  <article
+    key={service.id}
+    className="min-w-0 overflow-hidden rounded-xl bg-[#FFF9F3]"
+  >
+    <div className="h-48 overflow-hidden sm:h-56 lg:h-45 xl:h-36">
+      <img
+        src={service.image}
+        alt={service.title}
+        loading="lazy"
+        className="h-full w-full rounded-lg object-cover transition-transform duration-500 hover:scale-105"
+      />
+    </div>
 
-              <div className="p-3 sm:p-4">
-                <h2 className='font-["Cormorant_Garamond"] text-xl text-[#35251f] sm:text-2xl'>
-                  {service.title}
-                </h2>
-              </div>
-            </article>
-          ))}
+    <div className="p-3 sm:p-4 xl:p-2">
+      <h2 className='font-["Cormorant_Garamond"] text-xl text-[#35251f] sm:text-2xl xl:text-xl'>
+        {service.title}
+      </h2>
+    </div>
+  </article>
+))}
 
-        </div>
+</div>
       </div>
     </section>
   );

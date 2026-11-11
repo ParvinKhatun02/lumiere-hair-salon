@@ -1,4 +1,3 @@
-
 import React from "react";
 import hero_image from "../assets/hero_image.png";
 import { Scissors, Sparkles, Heart, ArrowRight } from "lucide-react";
@@ -7,7 +6,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <main className="relative min-h-[calc(100svh-56px)] w-full overflow-hidden bg-[#f8f3ef] lg:min-h-screen">
-
       {/* Desktop model image */}
       <div className="absolute inset-0 z-0 -translate-y-8 hidden lg:block pointer-events-none">
         <img
@@ -27,8 +25,7 @@ const Home = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-[calc(100svh-56px)] w-full  flex-col justify-center px-4 py-6 sm:px-8 sm:py-5 bg-black/25 backdrop-blur-[2px] rounded-r-2xl lg:min-h-screen lg:w-[60%] lg:justify-center lg:px-0 lg:py-16 lg:pl-16 lg:bg-transparent lg:backdrop-blur-none lg:rounded-none  xl:pl-24">
-
+      <div className="relative z-10 flex min-h-[calc(100svh-56px)] w-full  flex-col justify-center px-4 py-6 sm:px-8 sm:py-5 bg-black/20 backdrop-blur-[2px] rounded-r-2xl lg:min-h-screen lg:w-[60%] lg:justify-center lg:px-0 lg:py-16 lg:pl-16 lg:bg-transparent lg:backdrop-blur-none lg:rounded-none  xl:pl-24">
         {/* Tagline */}
         <p className="home-animate home-delay-1 mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#F5DCC5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] sm:text-sm lg:text-[#A63D24] lg:drop-shadow-none">
           BEAUTY . CARE . CONFIDENCE
@@ -50,25 +47,24 @@ const Home = () => {
 
         {/* Buttons */}
         <div className="home-animate home-delay-5 mt-5 flex flex-wrap items-center gap-4">
-          <Link
-            to="/booking"
+          <a
+            href="#booking"
             className="flex items-center gap-2 rounded-3xl bg-[#A63D24] px-4 py-3 text-sm font-medium text-white transition duration-300 hover:bg-[#7F2D1D]"
           >
             Book Your Appointment
             <ArrowRight size={18} strokeWidth={1.3} />
-          </Link>
+          </a>
 
-          <Link
-            to="/services"
+          <a
+            href="#services"
             className="rounded-3xl border border-[#F5DCC5] px-4 py-3 text-sm font-medium text-[#F5DCC5] drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] transition duration-300 hover:border-[#E8C5A9] lg:border-[#A63D24] lg:text-[#7F2D1D] lg:drop-shadow-none"
           >
             Explore services
-          </Link>
+          </a>
         </div>
 
         {/* Salon features */}
         <div className="home-animate home-delay-6 mt-6 flex flex-wrap items-center gap-x-5 gap-y-5 sm:mt-8 lg:mt-14">
-
           <div className="flex items-center gap-1">
             <div className="flex h-11 w-8 items-center justify-center text-[#F5DCC5] lg:text-[#A63D24]">
               <Scissors size={25} strokeWidth={1.5} />
@@ -110,7 +106,6 @@ const Home = () => {
               </p>
             </div>
           </div>
-
         </div>
       </div>
     </main>
@@ -118,4 +113,3 @@ const Home = () => {
 };
 
 export default Home;
-
