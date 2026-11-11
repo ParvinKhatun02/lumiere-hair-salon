@@ -7,24 +7,55 @@ import Booking from './component/Booking';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
 import OurTeam from './pages/OurTeam';
+import Footer from './component/Footer';
 
-const App = () => {
+function LandingPage() {
+  return (
+    <>
+      <Header />
+
+      <main>
+        <section id="home">
+          <Home />
+        </section>
+
+        <section id="services">
+          <Services />
+        </section>
+
+         <section id="booking">
+          <Booking />
+        </section>
+
+        <section id="gallery">
+          <Gallery />
+        </section>
+
+        <section id="about">
+          <About />
+        </section>
+        
+        <section id="ourteam">
+          <OurTeam/>
+        </section>
+
+        <section id="footer">
+          <Footer/>
+        </section>
+
+      </main>
+    </>
+  );
+}
+
+function App() {
   return (
     <BrowserRouter>
-      <div className='min-h-screen bg-[#FFF4E8]'>
-      <Header/>
       <Routes>
-        <Route path='/' element= {<Home/>}/>
-        <Route path='/services' element={<Services/>}/>
-        <Route path='/booking' element={<Booking/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/gallery' element={<Gallery/>}/>
-        <Route path='/our-team' element={<OurTeam/>}/>
+        <Route path="/" element={<LandingPage />} />
       </Routes>
-      </div>
     </BrowserRouter>
-    
-  )
+  );
 }
 
 export default App
