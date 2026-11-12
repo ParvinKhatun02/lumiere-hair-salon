@@ -61,7 +61,7 @@ const Header = () => {
 
         {/* Desktop Contact Button */}
         <div className="mr-6 hidden items-center gap-4 lg:flex lg:mr-10 xl:mr-18">
-          <a href="#contact">
+          <a href="#footer">
             <button className="flex gap-2 rounded-3xl bg-[#A63D24] px-4 py-2 text-xs font-medium text-white transition duration-300 hover:bg-[#7F2D1D]">
               Contact Us
             </button>
@@ -97,7 +97,7 @@ const Header = () => {
           </ul>
 
           <div className="mt-5 flex justify-center">
-            <a href="#contact" onClick={closeMenu}>
+            <a href="#footer" onClick={closeMenu}>
               <button className="rounded-3xl bg-[#A63D24] px-5 py-2 text-xs font-medium text-white transition duration-300 hover:bg-[#7F2D1D]">
                 Contact Us
               </button>

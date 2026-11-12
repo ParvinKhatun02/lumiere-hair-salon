@@ -1,12 +1,47 @@
-
 import React, { useState } from "react";
 import booking from "../assets/booking2.png";
 import Calendar from "./Calendar";
+import { Check } from "lucide-react";
 
 const Booking = () => {
   const [appointmentDate, setAppointmentDate] = useState(null);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleSubmit = (e) => {
+  e.preventDefault();
+  setShowSuccess(true);
+  e.target.reset();
+};
 
   return (
+    <>
+    {showSuccess && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+    <div className="w-full max-w-md rounded-2xl bg-[#FFF4E8] p-8 text-center shadow-2xl">
+
+      <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#E5EBDD] text-[#52764B]">
+        <Check size={32} />
+      </div>
+
+      <h2 className="mb-3 font-serif text-3xl text-[#35251F]">
+        Appointment Confirmed!
+      </h2>
+
+      <p className="mb-6 text-sm leading-7 text-[#76645A]">
+        Your appointment request has been submitted successfully.
+        Thank you for choosing LUMIÈRE Hair Salon!
+      </p>
+
+      <button
+        onClick={() => setShowSuccess(false)}
+        className="rounded-full bg-[#7F2D1D] px-8 py-3 text-sm text-white transition hover:bg-[#5E2117]"
+      >
+        Close
+      </button>
+
+    </div>
+  </div>
+  )}
     <section className="flex w-full flex-col items-center gap-8 bg-[#F1E7DD] px-4 py-8 sm:px-6 sm:py-10 md:px-10 lg:flex-row lg:items-center lg:gap-8 xl:gap-12">
 
       {/* Left Side - Booking Information */}
@@ -41,7 +76,7 @@ const Booking = () => {
         {/* Booking Form */}
         <div className="w-full min-w-0 sm:max-w-[380px] md:w-[45%] md:shrink-0 lg:w-[280px] lg:max-w-[280px]">
 
-          <form className="w-full space-y-2 rounded-xl border border-[#7F2D1D] bg-[#F3E2D9] p-4 sm:p-6">
+          <form onSubmit={handleSubmit} className="w-full space-y-2 rounded-xl border border-[#7F2D1D] bg-[#F3E2D9] p-4 sm:p-6">
 
             <h2 className="text-center font-['Cormorant_Garamond'] text-2xl font-bold text-[#35251f]">
               We will call you
@@ -125,7 +160,9 @@ const Booking = () => {
         </div>
       </div>
     </section>
+    </>
   );
-};
+}
+;
 
 export default Booking;

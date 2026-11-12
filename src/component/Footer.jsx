@@ -105,13 +105,13 @@ const Footer = () => {
               LUMIÈRE
             </Link>
 
-            <Link
-              to="/booking"
+            <a
+              href="#booking"
               className="mt-3 inline-flex items-center gap-2 rounded-full bg-[#FFF4E8] px-4 py-2 text-xs font-medium text-[#35251F] transition hover:bg-[#D9A18A]"
             >
               Book Your Consultation
               <ArrowRight size={14} />
-            </Link>
+            </a>
           </div>
 
           {/* Newsletter */}

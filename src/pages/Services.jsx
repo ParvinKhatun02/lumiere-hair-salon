@@ -26,7 +26,7 @@ const Services = () => {
 
         {/* Service Cards */}
         {/* Service Cards */}
-<div className="grid w-full min-w-0 grid-cols-1 gap-5 sm:grid-cols-1 lg:flex-1 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-4 xl:gap-y-3">
+<div className="grid w-full min-w-0 grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-1  lg:flex-1 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-4 xl:gap-y-3">
 
  {ServiceData.map((service) => (
   <article
@@ -38,7 +38,7 @@ const Services = () => {
         src={service.image}
         alt={service.title}
         loading="lazy"
-        className="h-full w-full rounded-lg object-cover transition-transform duration-500 hover:scale-105"
+        className="h-full w-full rounded-lg object-cover  transition-transform duration-500 hover:scale-105"
       />
     </div>
 
